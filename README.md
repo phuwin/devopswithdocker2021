@@ -1,5 +1,5 @@
 # devopswithdocker2021
-`docker-course-backend` and `docker-course-frontend` are built are built using Dockerfiles mentioned in [1.14 anwser](https://github.com/phuwin95/devopswithdocker2021/tree/part1#114-environment)
+`docker-course-backend` and `docker-course-frontend` images are built using Dockerfiles mentioned in [1.14 anwser](https://github.com/phuwin95/devopswithdocker2021/tree/part1#114-environment)
 # 2.3
 docker-compose.yaml
 
