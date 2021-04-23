@@ -78,7 +78,7 @@ services:
     image: redis
 ```
 
-# 2.8 Nginx and 2.9 Db volume
+# 2.8 Nginx and 2.9 Db volume and 2.10 check that everything works
 `/nginx/nginx.conf`:
 ```conf
   events { worker_connections 1024; }
@@ -112,6 +112,9 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     networks: 
       - my-network
+    depends_on: 
+      - frontend
+      - backend
 
   postgres:
     image: postgres:13.2-alpine
@@ -133,6 +136,7 @@ services:
       - POSTGRES_HOST=postgres
     depends_on: 
       - postgres
+      - redis
     networks: 
       - my-network
 
@@ -145,6 +149,8 @@ services:
 
   redis: 
     image: redis
+    networks:
+      - my-network
 
 networks:
   my-network:
