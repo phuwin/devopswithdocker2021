@@ -192,3 +192,6 @@ docker build -t docker-course-backend .
 ```bash
 docker run -it -p 8080:8080 docker-course-backend
 ```
+
+# 1.16 Heroku
+https://devops-docker-2021.herokuapp.com/
